@@ -1,5 +1,7 @@
 package main;
 
+import factory.PizzaFactory;
+import factory.PizzaType;
 import pizza.*;
 
 import java.util.ArrayList;
@@ -7,13 +9,14 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        CapriciosaPizza capriciosaPizza = new CapriciosaPizza(31.99,Arrays.asList("cheese","champignons","ham"));
-        HawaiPizza hawaiPizza = new HawaiPizza(29.99,Arrays.asList("cheese","pineaple","ham"));
-        MargheritaPizza margheritaPizza = new MargheritaPizza(24, Arrays.asList("cheese"));
+        PizzaFactory pizzaFactory= new PizzaFactory();
+        pizzaFactory.createPizza(PizzaType.CAPRICIOSA);
+        pizzaFactory.createPizza(PizzaType.HAWAI);
+        pizzaFactory.createPizza(PizzaType.MARGHERITA);
 
-        capriciosaPizza.showPizzaInfo();
-        hawaiPizza.showPizzaInfo();
-        margheritaPizza.showPizzaInfo();
+        System.out.println(new CapriciosaPizza().toString());
+        System.out.println(new HawaiPizza().toString());
+        System.out.println(new MargheritaPizza().toString());
     }
 
 }
