@@ -5,7 +5,7 @@ import pizza.HawaiPizza;
 import pizza.MargheritaPizza;
 import factory.PizzaType;
 public class PizzaFactory {
-public Pizza createPizza(PizzaType pizzaType){
+public static Pizza createPizza(PizzaType pizzaType){
 if(PizzaType.CAPRICIOSA.equals(pizzaType)){
     return new CapriciosaPizza();
 } else if(PizzaType.HAWAI.equals(pizzaType)){

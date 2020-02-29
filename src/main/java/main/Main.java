@@ -1,5 +1,6 @@
 package main;
 
+import factory.Pizza;
 import factory.PizzaFactory;
 import factory.PizzaType;
 import pizza.*;
@@ -9,14 +10,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        PizzaFactory pizzaFactory= new PizzaFactory();
-        pizzaFactory.createPizza(PizzaType.CAPRICIOSA);
-        pizzaFactory.createPizza(PizzaType.HAWAI);
-        pizzaFactory.createPizza(PizzaType.MARGHERITA);
-
-        System.out.println(new CapriciosaPizza().toString());
-        System.out.println(new HawaiPizza().toString());
-        System.out.println(new MargheritaPizza().toString());
+        Pizza pizza = PizzaFactory.createPizza(PizzaType.HAWAI);
+        Pizza pizza2 = PizzaFactory.createPizza(PizzaType.MARGHERITA);
+        Pizza pizza3 = PizzaFactory.createPizza(PizzaType.CAPRICIOSA);
+        System.out.println(pizza.toString());
+        System.out.println(pizza2.toString());
+        System.out.println(pizza3.toString());
     }
 
 }

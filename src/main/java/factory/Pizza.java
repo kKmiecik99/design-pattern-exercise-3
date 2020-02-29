@@ -41,9 +41,9 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "pizzaType=" + pizzaType +
-                ", cost=" + cost +
+        return
+                 pizzaType +
+                "{ cost=" + cost +
                 ", components=" + components +
                 '}';
     }
